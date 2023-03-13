@@ -14,7 +14,7 @@ Here is a list of the topics covered in the exercises:
 3. [Data types (tuples, dictionaries, containers, sets) , Comprehension, Zip function](./Exercises/04.md)
 
 ### Cheatsheets
-I also made a [directory](./Cheatsheets) with cheatsheets that cover the theory I've learned. 
+I've also created a [directory](./Cheatsheets) with cheatsheets that cover the theory I've learned. 
 
 ### Conclusion
 These exercises were a great way for me to solidify my understanding of Python programming concepts. I hope you find them helpful in your own learning journey!

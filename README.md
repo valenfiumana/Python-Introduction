@@ -6,7 +6,7 @@ The course covers fundamental concepts such as data types, control structures, f
 To get started with these exercises, you will need to have Python installed on your machine. You can download Python from the official website [here](https://www.python.org/downloads/).
 
 ### Exercises
-The exercises are organized by topic in separate files. Each directory contains a README file with a description of the exercises and a Python file with my solution.
+The exercises are organized by topic in separate files. Each exercise has a description and my solution.
 
 Here is a list of the topics covered in the exercises:
 1. [Strings, f-strings, Lists, Math Operations](./Exercises/01.md)

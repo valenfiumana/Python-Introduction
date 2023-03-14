@@ -17,8 +17,8 @@ Here is a list of the topics covered in the exercises:
 I've also created a [directory](./Cheatsheets) with cheatsheets that cover the theory I've learned. 
 
 ### Conclusion
-These exercises were a great way for me to solidify my understanding of Python programming concepts. I hope you find them helpful in your own learning journey!
+Whether you are a beginner just starting out with Python or an experienced programmer looking to improve your skills, these exercises can be a valuable resource to help you practice and deepen your understanding of the language.
 
-If you have any questions or feedback, feel free to contact me at [valen.fiumana@gmail.com] or create an issue in this repository.
+I hope that you find these exercises useful and that they provide you with a challenging and rewarding learning experience. If you have any questions or feedback, please don't hesitate to reach out to me. 
 
 Happy coding!

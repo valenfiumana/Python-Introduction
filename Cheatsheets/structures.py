@@ -1,109 +1,20 @@
-### FILES & STRUCTURES
-# What's in here:
-# 1. Files
-# 2. Functions
-# 3. Exceptions
-# 4. Data Types
-#   4.1 Tuple
-#   4.2 Dictionary
-#   4.3 Container
-#   4.4 Sets
-# 5. Zip function
-# 6. Comprehension
-# 7.  References and mutability
+## STRUCTURES
+# 1. Data Types
+#   1.1 Tuple
+#   1.2 Dictionary
+#   1.3 Container
+#   1.4 Sets
+# 2. Zip function
+# 3. Comprehension
+# 4.  References and mutability
 
-# - - - - - - - - - -  1. FILES - - - - - - - - - - #
-# abrir
-fp1 = open('../bar.txt', 'wt') # 'w' de write, 't' de text
-fp2 = open('foo.txt', 'rt') # 'r' de read, 't' de text
-
-#escribir
-fp1.write('Un texto')
-
-#leer
-data = fp2.read()
-
-#cerrar
-fp1.close()
-fp2.close()
-
-#leer con comando with (cierre automático)
-# 1. archivo entero
-with open ('foo.txt', 'rt') as file:
-    data = file.read()
-    # `data` es una cadena con todo el texto en `foo.txt`
-
-# 2. linea por linea
-with open('foo.txt', 'rt') as file:
-    for line in file:
-        print(line)
-
-
-# escribir con comando with (cierre automático)
-# cadenas
-with open('outfile', 'wt') as out:
-    out.write('Hello World\n')
-
-
-# - - - - - - - - - -  2. FUNCTIONS - - - - - - - - - - #
-#funcion clásica
-def sumcount(n):
-    total = 0
-    while n > 0:
-        total += n
-        n -= 1
-    return total
-
-a = sumcount(100)
-print(a)
-
-# funciones de biblioteca
-import math
-x = math.sqrt(10)
-print(round(x, 2))
-
-# break --> saltear actual iteración y pasar a la siguiente
-numeros = [1, 2, 3, 4, 5]
-for i in numeros:
-    print(i)
-    if i == 3:
-        break
-print('bucle finalizado','ultimo valor de i',i)
-
-# continue
-numeros = [1, -5, 2, -8, 10]
-# imprimo los cuadrados de los números positivos
-for i in numeros:
-    if i <= 0:
-        continue
-    print(i**2)
-
-# import urllib.request
-# u = urllib.request.urlopen('http://www.python.org/')
-# data = u.read()
-
-# - - - - - - - - - -  3. EXCEPCIONES - - - - - - - - - - #
-# excepción clásica
-num_valido = False
-while not num_valido:
-    try:
-        a = int(input('Ingresa un entero: '))
-        num_valido = True
-    except ValueError: # atrapo excepcion y repito ciclo
-        print('No ingresaste un entero')
-print(f'Ingresaste {a}')
-
-# generar excepción
-raise RuntimeError('¡Qué cagada!')
-
-
-# TODO: - - - - - - - - - -  4. TIPOS DE DATOS  - - - - - - - - - - #
+# TODO: - - - - - - - - - -  1. TIPOS DE DATOS  - - - - - - - - - - #
 # type None
 email_address = None
 if(email_address):
     print('En condicionales, None evalúa como False')
 
-#  . . . . . . 4.1 TUPLAS . . . . . . .
+#  . . . . . . 1.1 TUPLAS . . . . . . .
 # para representar registros o estructuras simples (un solo objeto con múltiples partes)
 # Contienen una serie de elementos ordenados (indexados), que pueden ser repetidos.
 # Son inmutables, no están pensadas para ser modificadas
@@ -166,7 +77,7 @@ firstNames = list(unzip[0])  #['Meredith', 'Derek']
 dates = list(unzip[1]) #['07/09', '11/11']
 
 
-# TODO:  . . . . . . 4.2 DICCIONARIOS . . . . . . .
+# TODO:  . . . . . . 1.2 DICCIONARIOS . . . . . . .
 # Función que manda claves en valores. Las claves sirven como índices para acceder a los valores.
 # Son útiles cuando hay muchos valores diferentes y esos valores pueden ser modificados o manipulados.
 # Dado que el acceso a los elementos se hace por clave, no es necesario recordar una posición para cierto dato:
@@ -204,7 +115,7 @@ claves = d.keys()
 print(claves) #dict_keys(['nombre', 'cajones', 'precio', 'fecha', 'cuenta'])
 
 
-# TODO:  . . . . . . 4.3 CONTENEDORES . . . . . . .
+# TODO:  . . . . . . 1.3 CONTENEDORES . . . . . . .
 # . . . listas como contenedores
 # Usá listas cuando el orden de los datos importe. Acordate de que las listas pueden contener cualquier tipo de objeto.
 # Son mutables, pueden ser modificadas sin definir una nueva lista.3
@@ -290,7 +201,7 @@ feriados = {
 
 feriados[(1, 5)] #'Día del trabajador'
 
-# TODO:  . . . . . . 4.4 CONJUNTOS . . . . . . .
+# TODO:  . . . . . . 1.4 CONJUNTOS . . . . . . .
 #Un conjunto es una colección de elementos únicos sin orden y sin repetición.
 citricos = { 'Naranja','Limon','Mandarina' } #set literal
 citricos = set(['Naranja', 'Limon', 'Mandarina']) #set
@@ -315,7 +226,7 @@ s1 & s2                 # Intersección de conjuntos
 s1 - s2                 # Diferencia de conjuntos
 
 
-# TODO:  . . . . . . 5. FUNCIÓN ZIP . . . . . . .
+# TODO:  . . . . . . 2. FUNCIÓN ZIP . . . . . . .
 # trabajar sobre dos listas al mismo tiempo
 nombres = ['Juan', 'Elsa', 'Ingrid', 'Carlos', 'Federico']
 apellidos = ['Pérez', 'Gómez', 'Muller', 'Tacha', 'Higgins']
@@ -348,7 +259,7 @@ alumnos = [
 print(list(zip(*alumnos))) # [('Carlos Gómez', 'Gabriela Torres', 'Juan Pérez', 'Éric Guay', 'Juana Monte', 'Carla Díaz'), (41008418, 45790918, 48327044, 35360531, 31583398, 43772387), (5, 8, 9, 7, 10, 6)]
 
 
-# TODO:  . . . . . . 6. COMPRENSIÓN LISTAS Y DICCIONARIOS  . . . . . . .
+# TODO:  . . . . . . 3. COMPRENSIÓN LISTAS Y DICCIONARIOS  . . . . . . .
 # La comprensión de listas crea un una nueva lista aplicando una operación a cada elemento de una secuencia
 a = [1, 2, 3, 4, 5]
 b = [2*x for x in a] # Creo una lista con el doble de los elementos de a
@@ -389,7 +300,7 @@ numeros = [1, 2, 4, 5, 8, 10, 13, 17]
 suma_pares = sum(n for n in numeros if (n%2)==0)
 print(suma_pares) # 24
 
-# TODO: - - - - - - - - 7. REFERENCIAS Y MUTABILIDAD  - - - - - - - - - - #
+# TODO: - - - - - - - - 4. REFERENCIAS Y MUTABILIDAD  - - - - - - - - - - #
 # enteros inmutables
 a = 10
 b = a

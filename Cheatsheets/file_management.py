@@ -61,6 +61,16 @@ with open('incendios-cantidad-causas-parques-nacionales_2022.csv') as f:
 print(encabezados) # ['incendio_anio', 'incendio_total_numero', 'incendio_negligencia_numero', 'incendio_intencional_numero', 'incendio_natural_numero', 'incendio_desconocida_numero']
 print(lineas[20]) # ['2013', '21', '7', '9', '0', '5']
 
+# OJO con decodificacion
+# Error return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+# UnicodeDecodeError: 'charmap' codec can't decode byte 0x81 in position 287: character maps to <undefined>
+with open('./Data/arbolado-en-espacios-verdes.csv', 'r', encoding='UTF8') as f: # especificar encoding
+    filas = csv.reader(f)
+    encabezados = next(filas)
+    lineas = []
+    for fila in filas:
+        lineas.append(fila)
+
 # escribir con comando with (cierre automático)
 # cadenas
 with open('outfile', 'wt') as out:

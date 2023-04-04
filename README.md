@@ -13,6 +13,7 @@ Here is a list of the topics covered in the exercises:
 2. [Functions, Loops, Conditionals](./Exercises/03.md)
 3. [Data types (tuples, dictionaries, containers, sets) , Comprehension, Zip function](./Exercises/04.md)
 4. [Files management, csv, Functions](./Exercises/05.md)
+5. [Numpy, functions](./Exercises/06&07.md)
 
 ### Cheatsheets
 I've also created a [directory](./Cheatsheets) with cheatsheets that cover the theory I've learned. 

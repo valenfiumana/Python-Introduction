@@ -17,6 +17,10 @@ Here is a list of the topics covered in the exercises:
 
 ### Cheatsheets
 I've also created a [directory](./Cheatsheets) with cheatsheets that cover the theory I've learned. 
+* [Basics](./Cheatsheets/basics.py)
+* [File management](./Cheatsheets/file_management.py)
+* [Structures](./Cheatsheets/structures.py)
+* [Numpy](./Cheatsheets/numpy.md)
 
 ### Conclusion
 Whether you are a beginner just starting out with Python or an experienced programmer looking to improve your skills, these exercises can be a valuable resource to help you practice and deepen your understanding of the language.

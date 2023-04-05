@@ -39,12 +39,15 @@ type(a) #<class 'numpy.ndarray'>
 * np.arange(n) --> range of values from 0 to n
 * np.arange(first, limit, increment)
 * np.linspace(first, limit, number_of_elements)
+* np.full(shape, fill_value)
+* np.where(condition, x, y) --> to replace values that meet condition with x, and those that do not with y.
 
 ![np_ones_zeros_random](./img/np_ones_zeros_random.png)
 
 ```python
 e = np.zeros(2) # [0. 0.]
 f = np.zeros((5,), dtype=int) # [0, 0, 0, 0, 0]
+l = np.zeros((2, 1))
 
 g = np.ones(2) # [1. 1.]
 
@@ -54,6 +57,15 @@ i = np.arange(4) # [0, 1, 2, 3]
 j = np.arange(2, 9, 2) # [2, 4, 6, 8]
 
 k = np.linspace(0, 10, num=5) # [ 0. ,  2.5,  5. ,  7.5, 10. ]
+
+l = np.full((2, 2), [1, 2]) # [[1, 2],
+                            #  [1, 2]]
+                            
+m = np.full((3, 3), True) # [[ True  True  True]
+                          # [ True  True  True]
+                          # [ True  True  True]]
+
+n = np.where(a%2!=0, -1, a) #[ 0 -1  2 -1 ] --> It replaced uneven numbers with -1
 ```
 
 ### Indexing

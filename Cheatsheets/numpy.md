@@ -105,6 +105,79 @@ a = np.array([1, 2, 3, 4])
 b = np.array([5, 6, 7, 8])
 np.concatenate((a, b)) # [1, 2, 3, 4, 5, 6, 7, 8]
 ```
+```python
+b = np.array([71,63,75])
+
+b[ [0,2] ] # [ 71 75 ]
+
+b[ [1,0,2] ] # [63 71 75]
+```
+
+**argsort()**
+
+```python
+c = np.array([99, 33, 66, 55, 77, 22, 11, 88, 44])
+
+c_sorted = c[ np.argsort(c) ]
+print(c_sorted) # [11 22 33 44 55 66 77 88 99]
+```
+
+#### Sorting 2D
+
+For 2D arrays we can sort from left to right (axis 1) or from top to bottom (axis 0).
+
+![sorting](./img/np_sorting.png)
+
+* np.sort(a)
+* np.sort(a, axis=0)
+* np.sort(a, axis=1)
+
+```python
+import numpy as np 
+a = np.array([[99, 21, 33],
+               [44, 55, 66],
+               [71, 8, 53]])
+
+simple = np.sort(a)
+# [[21 33 99]
+#  [44 55 66]
+#  [ 8 53 71]] 
+
+b = np.sort(a, axis=0) # top to bottom 
+# [[44  0 33]
+#  [71 21 53]
+#  [99 55 66]]
+
+c = np.sort(a, axis=1) # left to right
+# [[21 33 99]
+#  [44 55 66]
+#  [ 8 53 71]]
+```
+
+```python
+a = np.array([[ 99, 21, 33 ],[ 44, 55, 66 ], [ 71,  0, 53 ]])
+ # [[99 21 33]
+ # [44 55 66]
+ # [71  0 53]] 
+ 
+# sort 1st col
+a[ np.argsort(a[:,0]), : ]
+ # [[44 55 66]
+ # [71  0 53]
+ # [99 21 33]]
+
+# sort 2nd col
+a[ np.argsort(a[:,1]), : ]
+ # [[71  0 53]
+ # [99 21 33]
+ # [44 55 66]]
+
+# sort by 3rd col
+a[ np.argsort(a[:,2]), : ]
+# [[99 21 33]
+#  [71  0 53]
+#  [44 55 66]]
+```
 
 ### Dimension and size
 ```python
@@ -154,15 +227,4 @@ csv_arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
 np.savetxt('new_file.csv', csv_arr)
 np.loadtxt('new_file.csv')
 ```
-```python
 
-```
-```python
-
-```
-```python
-
-```
-```python
-
-```

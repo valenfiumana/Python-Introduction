@@ -21,3 +21,9 @@ print(b.itemsize) # 2
 print(c.itemsize) # 4
 print(d.itemsize) # 8
 
+# Leo cuanto ocupan en la memoria y lo paso a kilobytes
+print("===> Memoria")
+print("a %d kilobytes" % ((a.size * a.itemsize) / 1024))
+print("b %d kilobytes" % ((b.size * b.itemsize) / 1024))
+print("c %d kilobytes" % ((c.size * c.itemsize) / 1024))
+print("d %d kilobytes" % ((d.size * d.itemsize) / 1024))

@@ -6,8 +6,8 @@
 
 import numpy as np
 
-a = np.ones((3, 3))
-b = np.zeros((256, 256))
+a = np.ones((3, 3), dtype=int)
+b = np.zeros((256, 256), dtype=int)
 
 print(a.itemsize) # 8 bytes
 print(a.size) # 3 x 3 = 9 elements

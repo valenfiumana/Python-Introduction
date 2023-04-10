@@ -13,8 +13,8 @@ Here is a list of the topics covered in the exercises:
 2. [Functions, Loops, Conditionals](./Exercises/03.md)
 3. [Data types (tuples, dictionaries, containers, sets) , Comprehension, Zip function](./Exercises/04.md)
 4. [Files management, csv, Functions](./Exercises/05.md)
-5. [Numpy](./Exercises/06.md)
-6. [Functions](./Cheatsheets/07.md)
+5. [Numpy, functions](./Exercises/06.md)
+7. [Panda](./Exercises/08.md)
 
 ### Cheatsheets
 I've also created a [directory](./Cheatsheets) with cheatsheets that cover the theory I've learned. 
@@ -23,6 +23,7 @@ I've also created a [directory](./Cheatsheets) with cheatsheets that cover the t
 * [Structures](./Cheatsheets/structures.py)
 * [Numpy](./Cheatsheets/numpy.md)
 * [Functions](./Cheatsheets/functions.md)
+* [Panda](./Cheatsheets/pandas.md)
 
 ### Conclusion
 Whether you are a beginner just starting out with Python or an experienced programmer looking to improve your skills, these exercises can be a valuable resource to help you practice and deepen your understanding of the language.

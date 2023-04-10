@@ -1,0 +1,6 @@
+# Esta vez vamos a trabajar con los datos de los casos confirmados de Covid en la provincia de Santa Fe, que están en el archivo ['casos_covid_confirmados_santafe.csv'](../Data/casos_covid_confirmados_santafe.csv). Los mismos fueron obtenidos reduciendo el dataset oficial de los casos de covid en todo el país.
+# Cargue los contenidos del csv en un DataFrame de Pandas y explore el dataset. En particular, pedimos reportar cuántos registros contiene y qué columnas tiene. ¿Cuáles son todos los valores posibles de la columna "clasificacion"?
+# Calcular cuánta gente de Santa Fe falleció por covid. ¿Qué porcentaje de los casos totales terminaron en muertes (o sea, cuál es la mortalidad)?
+# Calcule cuántos casos y muertes hubo en cada departamento de la provincia de Santa Fe.
+# Haga un histograma de edades de los casos confirmados. Ojo, hay que descartar primero los que tienen la edad contada en meses (mire la columna "edad_años_meses"). Haga también un segundo histograma de edades solo de los fallecidos. (Sí, en el dataset hay alguien que figura que tiene 222 años... esos errores pasan. Se puede intentar filtrar esos casos para que no molesten en el histograma.)
+# Haga el gráfico de casos diarios de covid. Para eso utilizá la columna "fecha_apertura".

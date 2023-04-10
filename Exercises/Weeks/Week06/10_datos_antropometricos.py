@@ -50,7 +50,7 @@ def ansur(ansur_file):
     return ansur, datos, peso_stats, altura_stats, corr # la función devuelve 5 variables (valores).
 
 # Ejemplo para ejecutar sobre las mujeres:
-asur, datos, peso_stats, altura_stats, corr = ansur('/content/drive/MyDrive/Colab Notebooks/Data/ansurWomen.csv')
+asur, datos, peso_stats, altura_stats, corr = ansur('../../../Data/ansurWomen.csv')
 # Imprimo una tabla con los datos. (No era necesario mostrarlo de esta forma)
 print("Para las Mujeres")
 print("{:>15} {:>8} {:>8} {:>10}".format("Característica", "Min", "Máx", "Promedio"))
@@ -61,7 +61,7 @@ print(f"Correlación: {corr[0,1]}")
 
 # 3.a.
 import matplotlib.pyplot as plt
-ansurWomen = np.genfromtxt('/content/drive/MyDrive/Colab Notebooks/Data/ansurWomen.csv', delimiter=",", skip_header=1)
+ansurWomen = np.genfromtxt('../../../Data/ansurWomen.csv', delimiter=",", skip_header=1)
 
 altura_torso = ansurWomen[:,93]
 long_piernas = ansurWomen[:,99] - altura_torso

@@ -266,13 +266,4 @@ df[-500:].plot.line(x='time', y='km')
 
 plt.show()
 ```
-```python
-
-```
-```python
-
-```
-```python
-
-```
 
